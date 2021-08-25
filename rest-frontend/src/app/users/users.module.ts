@@ -7,6 +7,7 @@ import { CashValueComponent } from './cash-value/cash-value.component';
 import { InvestmentValueComponent } from './investment-value/investment-value.component';
 import { MarketMoversComponent } from './market-movers/market-movers.component';
 import { InsightsComponent } from './insights/insights.component';
+import { AssetViewComponent } from './net-worth/asset-view/asset-view.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InsightsComponent } from './insights/insights.component';
     CashValueComponent,
     InvestmentValueComponent,
     MarketMoversComponent,
-    InsightsComponent
+    InsightsComponent,
+    AssetViewComponent
   ],
   imports: [
     BrowserModule,

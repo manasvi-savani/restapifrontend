@@ -18,7 +18,7 @@ import { InsightsComponent } from './users/insights/insights.component';
     CashValueComponent,
     InvestmentValueComponent,
     MarketMoversComponent,
-    InsightsComponent
+    InsightsComponent,
   ],
   imports: [
     BrowserModule,
