@@ -7,21 +7,44 @@ import { RestapiService } from 'src/restapi.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  apiData:any = {category: ''}
+  userById:any = {category: 'users', id:5}
+  userByName:any = {category: 'users', name: ''}
+  allUsers:any = {category: 'users'}
   category:string = 'users'
-  paramObj = {category:'users'}
+  name:string = ''
+  id:number = 1
+  paramObj = {category:'', id: 2}
+  errorMessage = 'Result Not Found'
 
   constructor(private restapiService:RestapiService) { }
 
   ngOnInit(): void {
   }
 
-  makeServiceCall(){
+  serviceCallAllUsers(){
     // we call to a service method by subscribing to it 
     // remember the api call will be async so subscribing responds when it returns
-    this.restapiService.getApiData({category: this.category}).subscribe( (data)=>{
-        this.apiData = data
+    this.restapiService.getAllUsers({category: this.category}).subscribe( (data)=>{
+        this.allUsers = data  
     } )
   }
+
+  serviceCallUserById(){
+    // we call to a service method by subscribing to it 
+    // remember the api call will be async so subscribing responds when it returns
+    this.restapiService.getUserById({category: this.category, id: this.id}).subscribe( (data)=>{
+        this.userById = data
+    } )
+  }
+
+  serviceCallUserByName(){
+    // we call to a service method by subscribing to it 
+    // remember the api call will be async so subscribing responds when it returns
+    this.restapiService.getUserByName({category: this.category, name: this.name}).subscribe( (data)=>{
+        this.userByName = data
+    } )
+  }
+
+
 
 }
