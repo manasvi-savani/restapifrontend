@@ -9,8 +9,8 @@ import { CashValueComponent } from './users/cash-value/cash-value.component';
 import { InvestmentValueComponent } from './users/investment-value/investment-value.component';
 import { MarketMoversComponent } from './users/market-movers/market-movers.component';
 import { InsightsComponent } from './users/insights/insights.component';
-//import { AssetViewComponent } from './users/net-worth/asset-view/asset-view.component';
-
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,9 @@ import { InsightsComponent } from './users/insights/insights.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, // the FormsModule is needed for forms,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,7 +17,11 @@ import { AssetViewComponent } from './net-worth/asset-view/asset-view.component'
     InvestmentValueComponent,
     MarketMoversComponent,
     InsightsComponent,
+<<<<<<< HEAD
+    PortfolioViewComponent
+=======
     AssetViewComponent
+>>>>>>> bbdcce593fe46619a4bda0f6892ae1a1bb89bc28
   ],
   imports: [
     BrowserModule,
