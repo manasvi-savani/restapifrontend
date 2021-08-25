@@ -19,8 +19,9 @@ import {HttpClientModule} from '@angular/common/http';
     NetWorthComponent,
     CashValueComponent,
     InvestmentValueComponent,
+    //AssetViewComponent,
     MarketMoversComponent,
-    InsightsComponent
+    InsightsComponent,
   ],
   imports: [
     BrowserModule,

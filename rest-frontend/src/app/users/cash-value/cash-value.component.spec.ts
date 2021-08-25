@@ -1,25 +1,28 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
 
-import { CashValueComponent } from './cash-value.component';
+@Component({
+  selector: 'app-cash-value',
+  templateUrl: './cash-value.component.html',
+  styleUrls: ['./cash-value.component.css']
+})
+export class CashValueComponent implements OnInit {
 
-describe('CashValueComponent', () => {
-  let component: CashValueComponent;
-  let fixture: ComponentFixture<CashValueComponent>;
+  // declare model data for this component
+  total = 0
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CashValueComponent ]
-    })
-    .compileComponents();
-  });
+  constructor() { }
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CashValueComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  ngOnInit(): void {
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  // we can declare methods of this class here
+  handleSortie(value:number){
+    // here we can handle the CUSTOM event from the child component
+    this.total += value
+  }
+  // handleSellEvent(value:number){
+  //   this.total -= value
+  // }
+
+
+}
