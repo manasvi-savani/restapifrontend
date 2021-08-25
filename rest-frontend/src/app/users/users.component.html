@@ -24,6 +24,7 @@
 
 
     <!-- <p>{{userById | json }}</p><br/> -->
+    <p>UserId: {{userById.id ? userById.id:errorMessage }}</p>
     <p>Name: {{userById.id ? userById.name:errorMessage }}</p>
     <p>Cash Value: {{userById.id ? userById.cash_value:errorMessage }}</p>
     <p>Investment Value: {{userById.id ? userById.investment_value:errorMessage }}</p> 
@@ -40,6 +41,8 @@
     <p>Net Worth: {{userByName[0].name ? userByName[0].net_worth:errorMessage }}</p>
     <!-- <p>{{userByName[0].name ? userByName[0].stockNames[0].stock_name:errorMessage }}</p> -->
 <hr/>
+
+
 
 
 
