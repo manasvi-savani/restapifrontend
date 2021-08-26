@@ -11,7 +11,11 @@ import { NgModule } from '@angular/core';
 export class UsersComponent implements OnInit {
   userById:any = {category: 'users', id:5}
   userByName:any = {category: 'users', name: ''}
+  stockInRangeBuy: any = {category: 'users', date1: '', date2: ''}
+  stockInRangeSell: any = {category: 'users', date1: '', date2: ''}
   allUsers:any = {category: 'users'}
+  date1:string = ''
+  date2:string = ''
   category:string = 'users'
   name:string = ''
   id:number = 1
@@ -20,16 +24,13 @@ export class UsersComponent implements OnInit {
 
   constructor(private restapiService:RestapiService) { }
 
-  ngOnInit(): void {
-  }
 
   serviceCallAllUsers(){
     // we call to a service method by subscribing to it 
     // remember the api call will be async so subscribing responds when it returns
     this.restapiService.getAllUsers({category: this.category}).subscribe( (data)=>{
         this.allUsers = data  
-    } )
-  }
+    } )}
 
   serviceCallUserById(){
     // we call to a service method by subscribing to it 
@@ -47,6 +48,26 @@ export class UsersComponent implements OnInit {
     } )
   }
 
+  serviceBuyStockInRange(){
+    // we call to a service method by subscribing to it 
+    // remember the api call will be async so subscribing responds when it returns
+    this.restapiService.getBuyInRange({category: this.category, date1: this.date1, date2: this.date2}).subscribe( (data)=>{
+        this.stockInRangeBuy = data
+    } )
+  }
+
+  serviceSellStockInRange(){
+    // we call to a service method by subscribing to it 
+    // remember the api call will be async so subscribing responds when it returns
+    this.restapiService.getSellInRange({category: this.category, date1: this.date1, date2: this.date2}).subscribe( (data)=>{
+        this.stockInRangeSell = data
+    } )
+  }
+
+  ngOnInit()  {
+    
+  
+  }
 
 
 }
