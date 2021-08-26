@@ -23,16 +23,13 @@ export class UsersComponent implements OnInit {
 
   constructor(private restapiService:RestapiService) { }
 
-  ngOnInit(): void {
-  }
 
   serviceCallAllUsers(){
     // we call to a service method by subscribing to it 
     // remember the api call will be async so subscribing responds when it returns
     this.restapiService.getAllUsers({category: this.category}).subscribe( (data)=>{
         this.allUsers = data  
-    } )
-  }
+    } )}
 
   serviceCallUserById(){
     // we call to a service method by subscribing to it 
@@ -66,6 +63,10 @@ export class UsersComponent implements OnInit {
     } )
   }
 
+  ngOnInit(){
+    
+  
+  }
 
 
 }

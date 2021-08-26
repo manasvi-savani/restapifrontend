@@ -1,13 +1,15 @@
 <!-- here we write our own component template -->
 <html>
 <body>
-  <!-- <header>
+
+  <header>
     <h1 class='center'>John's Personal Portfolio</h1>
     <section class="left">
-      <h3>Total Cash:</h3>
-      <p class="card-text">Cash Hold:</p>
-      <p class="card-text">Today's Gain:</p>
-      <p class="card-text">Total Gain:</p>
+      <!-- <button onload='serviceCallTotalNetworth()'>Go</button> -->
+      <h2>${{reportData | json}} </h2>
+      <p>Cash Hold:</p>
+      <p>Today's Gain:</p>
+      <p>Total Gain:</p>
     </section>
     <section class="right">
       <h3>Gainer</h3>
@@ -15,65 +17,15 @@
     <section class="right">
       <h3>Loser</h3>
     </section>
-  </header> -->
-
-  <header>
-    <h1 class='center'>John's Personal Portfolio</h1>
-      <div class="flex">
-        <div class="card p-2" style="width: 15rem;">
-          <div class="card-body">
-            <h4 class="card-title fw-bold">Overview</h4>
-            <p class="card-text">Cash Hold:</p>
-            <p class="card-text">Today's Gain:</p>
-            <p class="card-text">Total Gain:</p>
-          </div>
-        </div>
-      
-        <div class="card p-2 ml-auto" style="width: 15rem; height: 5rem;">
-          <div class="card-body">
-            <h4 class="card-title fw-bold">Gainer</h4>
-          </div>
-        </div>
-        <div class="card p-2 ml-auto" style="width: 15rem; height: 5rem;">
-          <div class="card-body">
-            <h4 class="card-title fw-bold">Loser</h4>
-          </div>
-        </div>
-      </div>
   </header>
 
-  
   <body>
-    
-    <app-users></app-users>
+  <app-users></app-users>
   </body>
-
-
-
-
-  <!-- 
-    <section>
-      here is where routed content will appear it is mutually exclusive content
-      <nav>
-         links go here 
-        <div class="tab">
-          <a routerLink='/users'>Users</a> |
-          <a routerLink='/users/cash-value'>Cash Value</a> |
-          <a routerLink='/users/insights'>Insights</a> |
-          <a routerLink='/users/investment-value'>Investment Value</a> |
-          <a routerLink='/users/market-movers'>Market Movers</a> |
-          <a routerLink='/users/net-worth'>Net Worth</a> 
-          <router-outlet></router-outlet>
-        </div>
-        
-      </nav>
-      
-    </section>
-
-   -->
-    
-  
-  
-  
 </body>
+<script>
+  setTimeout(() => {
+  console.log("hi")
+}, 1000);
+</script>
 </html>
