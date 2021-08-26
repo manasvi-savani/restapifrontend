@@ -32,5 +32,24 @@ export class RestapiService {
   getnetworth(params={category:'users'}){
     return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/net_worth`)
   }
+
+  getcash(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/total_cash`)
+  }
   
+  gettodaygl(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/todaygl`)
+  }
+
+  gettotalgl(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/tgainloss`)
+  }
+
+  gettop5gainers(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/top5`)
+  }
+
+  get5loser(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/loser5`)
+  }
 }

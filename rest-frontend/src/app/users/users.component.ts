@@ -22,6 +22,8 @@ export class UsersComponent implements OnInit {
   paramObj = {category:'', id: 2}
   errorMessage = 'Result Not Found'
 
+  
+
   constructor(private restapiService:RestapiService) { }
 
 
@@ -64,8 +66,8 @@ export class UsersComponent implements OnInit {
     } )
   }
 
-  ngOnInit()  {
-    
+  ngOnInit(){
+  
   
   }
 

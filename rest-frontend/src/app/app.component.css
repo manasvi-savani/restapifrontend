@@ -27,7 +27,7 @@ article {background-color: rgb(233, 240, 233);}
 
 .left {
   float: left;
-  width: 200px;
+  width: 250px;
   border: 3px solid #000000;
   padding: 10px;
   box-shadow: 2px 2px;
@@ -36,7 +36,7 @@ article {background-color: rgb(233, 240, 233);}
 
 .right {
   float: right;
-  width: 300px;
+  width: 200px;
   border: 3px solid #000000;
   padding: 10px;
   box-shadow: 2px 2px;
@@ -52,4 +52,14 @@ article {background-color: rgb(233, 240, 233);}
 
 .flex {
   display: flex !important;
+}
+
+.gain{
+  color:green;
+  tab-size: 16;
+}
+
+.loss{
+  color:red;
+  tab-size: 16;
 }
