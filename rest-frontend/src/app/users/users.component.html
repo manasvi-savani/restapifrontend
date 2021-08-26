@@ -8,10 +8,17 @@
         <input type="range" min="1" max="9" [(ngModel)]='id' name="id"/>{{id}}
     Enter a user's name
         <input placeholder='Name' [(ngModel)]='name' name="name"/>
+    Enter a first date
+      <input type="date" placeholder='Date1' [(ngModel)]='date1' name="date1"/>
+    Enter a second date
+      <input type="date" placeholder='Date2' [(ngModel)]='date2' name="date2"/>
 </form>
 <button (click)='serviceCallAllUsers()'>Get All Users</button>
 <button (click)='serviceCallUserById()'>Get User By ID</button>
 <button (click)='serviceCallUserByName()'>Get User By Name</button>
+<button (click)='serviceCallUserByName()'>Get User By Name</button>
+<button (click)='serviceBuyStockInRange()'>Get Buy Stocks In Range</button>
+<button (click)='serviceSellStockInRange()'>Get Sell Stocks In Range</button>
 
 <section>
     <p>{{allUsers | json }}</p><br/>
