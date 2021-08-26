@@ -9,6 +9,7 @@ import { MarketMoversComponent } from './market-movers/market-movers.component';
 import { InsightsComponent } from './insights/insights.component';
 import { AssetViewComponent } from './net-worth/asset-view/asset-view.component';
 import { BasicTableComponent } from './basic-table/basic-table.component';
+import { TestGraphComponent } from './test-graph/test-graph.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BasicTableComponent } from './basic-table/basic-table.component';
     MarketMoversComponent,
     InsightsComponent,
     AssetViewComponent,
-    BasicTableComponent
+    BasicTableComponent,
+    TestGraphComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,56 @@
+body { font-family: 'Times New Roman', Times, serif; 
+  /* background-color: rgb(30, 28, 49); */
+
+}
+
+
+.center {
+  background-color :rgb(30, 28, 49);
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  border-style: ridge;
+  margin:0;
+  color: rgb(255, 255, 255)
+}
+
+article {background-color: rgb(233, 240, 233);}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  left:-100px; 
+  top:150px
+}
+
+
+.left {
+  float: left;
+  width: 200px;
+  border: 3px solid #000000;
+  padding: 10px;
+  box-shadow: 2px 2px;
+  background-color: whitesmoke;}
+
+
+.right {
+  float: right;
+  width: 300px;
+  border: 3px solid #000000;
+  padding: 10px;
+  box-shadow: 2px 2px;
+  background-color: whitesmoke;}
+
+.middle {
+  float: center;
+  width: 200px;
+  border: 3px solid #000000;
+  padding: 10px;
+  box-shadow: 2px 2px;
+  background-color: whitesmoke;}
+
+.flex {
+  display: flex !important;
+}

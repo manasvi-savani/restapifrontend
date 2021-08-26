@@ -12,8 +12,9 @@ import { InsightsComponent } from './users/insights/insights.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,17 +23,16 @@ import {MatCardModule} from '@angular/material/card';
     NetWorthComponent,
     CashValueComponent,
     InvestmentValueComponent,
-    //AssetViewComponent,
     MarketMoversComponent,
     InsightsComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, // the FormsModule is needed for forms,
     HttpClientModule, BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
