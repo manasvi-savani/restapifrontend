@@ -1,15 +1,15 @@
 <!-- here we write our own component template -->
 <html>
 <body>
-  <header>
-    <h1 class='center'>John's Personal Portfolio</h1>
+  <h1 class='center'>John's Personal Portfolio</h1>
+  <div class ="sidebar">
     <section class="left">
       <h2>${{reportData | json}} </h2>
       <p>Cash Hold: ${{reportCash | json}}</p>
       <p>Today's Gain: +${{reporttgl | json}}</p>
-      <p>Total Gain: +${{reportgl | json}}</p>
+      <p>Total Gain: +${{reportgl | json}}<p>
     </section>  
-    <section class="right">
+    <section class="left">
       <h2>Gainer</h2>
       <p>{{top5[0].stock_name}}     <span class="gain">{{top5[0].gain_loss}}</span></p>
       <p>{{top5[1].stock_name}}     <span class="gain">{{top5[1].gain_loss}}</span></p>
@@ -17,7 +17,7 @@
       <p>{{top5[3].stock_name}}     <span class="gain">{{top5[3].gain_loss}}</span></p>
       <p>{{top5[4].stock_name}}     <span class="gain">{{top5[4].gain_loss}}</span></p>
     </section>
-    <section class="right">
+    <section class="left">
       <h2>Loser</h2>
       <p>{{loser5[0].stock_name}}     <span class="loss">{{loser5[0].gain_loss}}</span></p>
       <p>{{loser5[1].stock_name}}     <span class="loss">{{loser5[1].gain_loss}}</span></p>
@@ -25,6 +25,9 @@
       <p>{{loser5[3].stock_name}}     <span class="loss">{{loser5[3].gain_loss}}</span></p>
       <p>{{loser5[4].stock_name}}     <span class="loss">{{loser5[4].gain_loss}}</span></p>
     </section>
-  </header>
+  </div>
+  <div>
+    
+  </div>
 </body>
 </html>
