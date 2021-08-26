@@ -20,80 +20,39 @@
 <button (click)='serviceBuyStockInRange()'>Get Buy Stocks In Range</button>
 <button (click)='serviceSellStockInRange()'>Get Sell Stocks In Range</button>
 
-<section>
-    <p>{{allUsers | json }}</p><br/>
-    <!-- <p>Name: {{allUsers[0].name}}</p>
-    <p>Cash Value: {{allUsers[0].cash_value}}</p>
-    <p>Investment Value: {{allUsers[0].investment_value}}</p> 
-    <p>Net Worth: {{allUsers[0].net_worth}}</p> -->
-</section>
+<div class="p-2" style="display: flex;">
+    
+    <div class="card p-2" style="width: 15rem;">
+      <div class="card-body">
+        <h4 class="card-title fw-bold">Get User All Users</h4>
+        <p class="card-text">{{allUsers | json }}</p><br/>
+      </div>
+    </div>
 
 
-
-    <!-- <p>{{userById | json }}</p><br/> -->
-    <p>UserId: {{userById.id ? userById.id:errorMessage }}</p>
-    <p>Name: {{userById.id ? userById.name:errorMessage }}</p>
-    <p>Cash Value: {{userById.id ? userById.cash_value:errorMessage }}</p>
-    <p>Investment Value: {{userById.id ? userById.investment_value:errorMessage }}</p> 
-    <p>Net Worth: {{userById.id ? userById.net_worth:errorMessage }}</p>
-<hr/>
-
-
-
-
-    <!-- <p>{{userByName | json }}</p> -->
-    <p>Name: {{userByName[0].name ? userByName[0].name:errorMessage }}</p>
-    <p>Cash Value: {{userByName[0].name ? userByName[0].cash_value:errorMessage }}</p>
-    <p>Investment Value: {{userByName[0].name ? userByName[0].investment_value:errorMessage }}</p> 
-    <p>Net Worth: {{userByName[0].name ? userByName[0].net_worth:errorMessage }}</p>
-    <!-- <p>{{userByName[0].name ? userByName[0].stockNames[0].stock_name:errorMessage }}</p> -->
-<hr/>
+    <div class="card p-2" style="width: 15rem;">
+      <div class="card-body">
+        <h4 class="card-title fw-bold">Get User By ID</h4>
+        <p class="card-text">UserId: {{userById.id ? userById.id:errorMessage }}</p>
+        <p class="card-text">Name: {{userById.id ? userById.name:errorMessage }}</p>
+        <p class="card-text">Cash Value: {{userById.id ? userById.cash_value:errorMessage }}</p>
+        <p class="card-text">Investment Value: {{userById.id ? userById.investment_value:errorMessage }}</p> 
+        <p class="card-text">Net Worth: {{userById.id ? userById.net_worth:errorMessage }}</p>
+      </div>
+    </div>
 
 
+    <div class="card p-2" style="width: 15rem;">
+      <div class="card-body">
+        <h4 class="card-title fw-bold">Get User By Name</h4>
+        <p class="card-text">Name: {{userByName[0].name ? userByName[0].name:errorMessage }}</p>
+        <p class="card-text">Cash Value: {{userByName[0].name ? userByName[0].cash_value:errorMessage }}</p>
+        <p class="card-text">Investment Value: {{userByName[0].name ? userByName[0].investment_value:errorMessage }}</p> 
+        <p class="card-text">Net Worth: {{userByName[0].name ? userByName[0].net_worth:errorMessage }}</p>
+      </div>
+    </div>
+    
+  </div>
 
 
-
-
-
-
-<!-- here we write our own component template -->
-<article>
-    <nav>
-      <!-- links go here -->
-      <!-- <a routerLink='/users/cash-value'>Cash Value</a> |
-      <a routerLink='/users/insights'>Insights</a> |
-      <a routerLink='/users/investment-value'>Investment Value</a> |
-      <a routerLink='/users/market-movers'>Market Movers</a> |
-      <a routerLink='/users/net-worth'>Net Worth</a>  -->
-  
-    </nav>
-    <!-- <h2>Routed App Demo</h2> -->
-    <!-- here we can bind to the daa models -->
-    <!-- the | is 'pipe' in this case for date -->
-    <!-- <p>today is {{today | date:'hh:mm:ss'}}</p> -->
-    <!-- the {{}} are called interpolation binding -->
-    <!-- <p>Welcome {{user}}</p> -->
-    <!-- <p>one plus two is {{1+2}}</p> -->
-    <!-- ask the user to agree to cookies -->
-    <!-- the () are one-way event binding OUT of the component -->
-    <!-- structural directives AWLAYS start with an asterisk * -->
-    <!-- <ng-container *ngIf='askCookieConsent'>
-      <p>This site uses cookies, is that ok?</p>
-      <button  (click)='agreeCookie()' >Agree</button>
-    </ng-container> -->
-    <hr/>
-    <!-- the <form> tag becomes and NgForm because of the FormsModule -->
-    <form>
-    </form>
-  
-    <!-- or... -->
-    <!-- Turns out we don't even need a <form> tag! -->
-      <!-- <input placeholder='Facebook image' required [(ngModel)]='fbImage' />
-      <br/>
-      <img src='https://graph.facebook.com/{{fbImage}}/picture?type=normal'> -->
-  
-    <hr/>
-    <!-- here is where routed content will appear it is mutually exclusive content-->
-    <router-outlet></router-outlet>
-  </article>
   
