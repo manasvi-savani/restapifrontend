@@ -1,23 +1,11 @@
 <section>
-    <h3>Investment Value {{total |currency:'C$'}}</h3>
-    <p>Here are the assets that make up the investment value</p>
-  
     <aside>
-      <h4>Current Stock Codes: <span *ngFor='let item of codes'>{{item.code}}  </span></h4>
-  
+      <table style="width:50%">
+        <tr>
+          <th>Stock Name</th>
+          <th>Gain/Loss</th> 
+          <th>Quantity</th>
+        </tr>
+      </table>>
     </aside>
-    <!-- [] injects values into a component (one-way binding into component) -->
-     <!-- <app-asset-view
-      *ngFor="let item of codes; let i=index"
-      [code]='item.code'
-      [price]='item.price'
-      [index]='i'
-      (sortie)='handleSortie($event)'
-      (codeChangeEvent)='handleCodeChangeEvent($event)'> -->
-      <!-- $event is for custom events -->
-      <!-- (sellEvent)='handleSellEvent($event)'> -->
-    <!-- </app-asset-view>  -->
-  
-    <!-- <pre></pre> -->
-  
   </section>
