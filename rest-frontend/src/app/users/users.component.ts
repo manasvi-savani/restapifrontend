@@ -11,7 +11,7 @@ import { NgModule } from '@angular/core';
 export class UsersComponent implements OnInit {
   userById:any = {category: 'users', id:5}
   userByName:any = {category: 'users', name: ''}
-  stockInRange: any = {category: 'users', date1: '', date2: ''}
+  stockInRange:any = {category: 'users', date1: '', date2: ''}
   allUsers:any = {category: 'users'}
   date1:any = ''
   date2:any = ''
@@ -20,6 +20,8 @@ export class UsersComponent implements OnInit {
   id:number = 1
   paramObj = {category:'', id: 2}
   errorMessage = 'Result Not Found'
+
+  
 
   constructor(private restapiService:RestapiService) { }
 
@@ -64,7 +66,7 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(){
-    
+  
   
   }
 
