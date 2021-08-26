@@ -9,7 +9,10 @@ import { RestapiService } from 'src/restapi.service';
 export class UsersComponent implements OnInit {
   userById:any = {category: 'users', id:5}
   userByName:any = {category: 'users', name: ''}
+  stockInRange: any = {category: 'users', date1: '', date2: ''}
   allUsers:any = {category: 'users'}
+  date1:any = ''
+  date2:any = ''
   category:string = 'users'
   name:string = ''
   id:number = 1
@@ -42,6 +45,22 @@ export class UsersComponent implements OnInit {
     // remember the api call will be async so subscribing responds when it returns
     this.restapiService.getUserByName({category: this.category, name: this.name}).subscribe( (data)=>{
         this.userByName = data
+    } )
+  }
+
+  serviceBuyStockInRange(){
+    // we call to a service method by subscribing to it 
+    // remember the api call will be async so subscribing responds when it returns
+    this.restapiService.getBuyInRange({category: this.category, date1: this.date1, date2: this.date2}).subscribe( (data)=>{
+        this.stockInRange = data
+    } )
+  }
+
+  serviceSellStockInRange(){
+    // we call to a service method by subscribing to it 
+    // remember the api call will be async so subscribing responds when it returns
+    this.restapiService.getSellInRange({category: this.category, date1: this.date1, date2: this.date2}).subscribe( (data)=>{
+        this.stockInRange = data
     } )
   }
 
