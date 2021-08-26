@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestapiService } from 'src/restapi.service';
+import { RestapiService } from 'src/service/restapi.service';
 
 @Component({
   selector: 'app-users',

@@ -8,6 +8,7 @@ import { InvestmentValueComponent } from './investment-value/investment-value.co
 import { MarketMoversComponent } from './market-movers/market-movers.component';
 import { InsightsComponent } from './insights/insights.component';
 import { AssetViewComponent } from './net-worth/asset-view/asset-view.component';
+import { BasicTableComponent } from './basic-table/basic-table.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AssetViewComponent } from './net-worth/asset-view/asset-view.component'
     InvestmentValueComponent,
     MarketMoversComponent,
     InsightsComponent,
-    AssetViewComponent
+    AssetViewComponent,
+    BasicTableComponent
   ],
   imports: [
     BrowserModule,
