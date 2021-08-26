@@ -19,6 +19,7 @@ export class AppComponent implements OnInit{
   todaygl:any ={category: 'users'}
   totalgl:any = {category: 'users'}
   top5:any = {category: 'users', name:''}
+  loser5:any = {category: 'users', name:''}
   errorMessage = 'Result Not Found'
   category:string = 'users'
   name:string = ''
@@ -44,6 +45,10 @@ export class AppComponent implements OnInit{
   gettop5gainers(){
     this.restapiService.gettop5gainers({category: this.category}).subscribe((data:any)=>{this.top5 = data})
   }
+  
+  serviceCall5loser(){
+    this.restapiService.get5loser({category: this.category}).subscribe((data:any)=>{this.loser5 = data})
+  }
 
   ngOnInit(){
     this.serviceCallTotalCash()
@@ -51,5 +56,6 @@ export class AppComponent implements OnInit{
     this.serviceCallTotalGL()
     this.serviceCallTodayGL()
     this.gettop5gainers()
+    this.serviceCall5loser()
   }
 }

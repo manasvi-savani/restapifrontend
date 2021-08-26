@@ -48,4 +48,8 @@ export class RestapiService {
   gettop5gainers(params={category:'users'}){
     return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/top5`)
   }
+
+  get5loser(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/loser5`)
+  }
 }
