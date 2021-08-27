@@ -15,11 +15,11 @@
             <div class="card h-100">
                 <div class="card-body p-4">
                     <h4 class="card-title"> Account Overview</h4>
-                    <h3 class="card-text text-primary fwb">$64871.84</h3>
+                    <h3 class="card-text text-primary fwb">${{reportData | json}}<</h3>
                     <p class="text-muted">Net Worth</p>
-                    <h5 class="card-text d-inline">Cash Holdings: </h5> <p class="d-inline text-success fwb"> $22790</p><br><br>
-                    <h5 class="card-text d-inline">Today's Gain:  </h5> <p class="d-inline text-success fwb"> +$13.1</p><br><br>
-                    <h5 class="card-text d-inline">Total Gain: </h5> <p class="d-inline text-success fwb"> +$16299.19 </p>
+                    <h5 class="card-text d-inline">Cash Holdings: </h5> <p class="d-inline text-success fwb"> ${{reportCash | json}}</p><br><br>
+                    <h5 class="card-text d-inline">Today's Gain:  </h5> <p class="d-inline text-success fwb"> +${{reporttgl | json}}</p><br><br>
+                    <h5 class="card-text d-inline">Total Gain: </h5> <p class="d-inline text-success fwb"> +${{reportgl | json}} </p>
                 </div>
             </div>
         </div>
@@ -34,19 +34,19 @@
                       <div class="d-flex">
                         <div class="col-lg-6">
                           <h5 class="card-title pb-2">Gainers</h5>
-                          <h6 class="card-text d-inline">AAPL </h6> <p class="d-inline text-success fwb"> $22790</p><br><br>
-                          <h6 class="card-text d-inline">GOOGL </h6> <p class="d-inline text-success fwb"> +$13.1</p><br><br>
-                          <h6 class="card-text d-inline">AAPL </h6> <p class="d-inline text-success fwb"> $22790</p><br><br>
-                          <h6 class="card-text d-inline">GOOGL </h6> <p class="d-inline text-success fwb"> +$13.1</p><br><br>
-                          <h6 class="card-text d-inline">WFC</h6> <p class="d-inline text-success fwb"> +$16299.19 </p>
+                          <h6 class="card-text d-inline">{{top5[0].stock_name}} </h6> <p class="d-inline text-success fwb"> {{top5[0].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{top5[1].stock_name}} </h6> <p class="d-inline text-success fwb">{{top5[1].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{top5[2].stock_name}}  </h6> <p class="d-inline text-success fwb">{{top5[2].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{top5[3].stock_name}}  </h6> <p class="d-inline text-success fwb">{{top5[3].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{top5[4].stock_name}}</h6> <p class="d-inline text-success fwb">{{top5[4].gain_loss}}</p>
                         </div>
                         <div class="col-lg-6">
                           <h5 class="card-title pb-2">Losers</h5>
-                          <h6 class="card-text d-inline">AAPL </h6> <p class="d-inline text-danger fwb"> $22790</p><br><br>
-                          <h6 class="card-text d-inline">GOOGL </h6> <p class="d-inline text-danger fwb"> +$13.1</p><br><br>
-                          <h6 class="card-text d-inline">AAPL </h6> <p class="d-inline text-danger fwb"> $22790</p><br><br>
-                          <h6 class="card-text d-inline">GOOGL </h6> <p class="d-inline text-danger fwb"> +$13.1</p><br><br>
-                          <h6 class="card-text d-inline">WFC</h6> <p class="d-inline text-danger fwb"> +$16299.19 </p>
+                          <h6 class="card-text d-inline">{{loser5[0].stock_name}}  </h6> <p class="d-inline text-danger fwb">{{loser5[0].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{loser5[1].stock_name}}  </h6> <p class="d-inline text-danger fwb">{{loser5[1].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{loser5[2].stock_name}}  </h6> <p class="d-inline text-danger fwb">>{{loser5[2].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{loser5[3].stock_name}}   </h6> <p class="d-inline text-danger fwb">{{loser5[3].gain_loss}}</p><br><br>
+                          <h6 class="card-text d-inline">{{loser5[4].stock_name}}   </h6> <p class="d-inline text-danger fwb">{{loser5[4].gain_loss}}</p>
                         </div>
                       </div>
                   </div>
