@@ -12,6 +12,8 @@ import { InsightsComponent } from './users/insights/insights.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RestapiService } from 'src/service/restapi.service';
+import { ChartJsComponent } from './chart-js/chart-js.component';
 
 
 
@@ -25,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InvestmentValueComponent,
     MarketMoversComponent,
     InsightsComponent,
+    ChartJsComponent,
    
   ],
   imports: [
@@ -34,7 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule, BrowserAnimationsModule,
 
   ],
-  providers: [],
+  providers: [RestapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

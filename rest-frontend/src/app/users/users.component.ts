@@ -53,7 +53,7 @@ export class UsersComponent implements OnInit {
   serviceBuyStockInRange(){
     // we call to a service method by subscribing to it 
     // remember the api call will be async so subscribing responds when it returns
-    this.restapiService.getBuyInRange({category: this.category, date1: this.date1, date2: this.date2}).subscribe( (data)=>{
+    this.restapiService.getBuyInRange({category: this.category, date1: this.date1, date2: this.date2}).subscribe( (data) =>{
         this.stockInRangeBuy = data
     } )
   }
