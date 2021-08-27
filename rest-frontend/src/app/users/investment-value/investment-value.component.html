@@ -1,11 +1,24 @@
 <section>
     <aside>
+      <p>{{stocks | json}}</p>
       <table style="width:50%">
         <tr>
+          <th>ID</th>
           <th>Stock Name</th>
-          <th>Gain/Loss</th> 
           <th>Quantity</th>
+          <th>Cost Per Basis</th> 
+          <th>Last Price</th>
+          <th>Total Cost</th>
+          <th>Market Value</th>
+          <th>Today's G/L</th>
+          <th>Total G/L</th>
         </tr>
-      </table>>
+        <tr *ngFor = "let row of stocks">
+          <td *ngFor = "let column of header">
+            {{stocks[column]}}
+          </td>
+        </tr>
+        
+      </table> 
     </aside>
   </section>
