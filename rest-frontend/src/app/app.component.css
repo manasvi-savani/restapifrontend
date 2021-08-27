@@ -16,9 +16,11 @@ body { font-family: 'Times New Roman', Times, serif;
   background-color: #0FF;
   width: 80px;
   position: absolute;
-  top: 55px;
-  min-height: 300px;
+  top: 62px;
+  min-height: 250px;
   }
+
+  
 
 .main {
     margin-left: 260px;
@@ -37,4 +39,12 @@ nav a {
   padding-top: 10px;
   position: relative;
 }
+
+.sidebar_r{
+  background-color: #0FF;
+  width: 80px;
+  float:left;
+  top: 0px;
+  min-height: 200px;
+  }
 

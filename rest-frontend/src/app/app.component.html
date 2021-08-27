@@ -4,19 +4,16 @@
   <header>
     <h1 class='center'>John's Personal Portfolio</h1>
   </header>
-  <!-- <router-outlet></router-outlet> -->
-    <div class="sidebar">
+  <div class="sidebar">
      <app-market-movers></app-market-movers>
-    </div>
-    <div class="main">
-      <nav>
-        <a routerLink='/users/cash-value'>Cash Value</a> |
-        <a routerLink='/users/investment-value'>Investment Value</a> 
-        <router-outlet></router-outlet>
-      </nav>
-      <!-- <a routerLink='/users/cash-value'>Cash Value</a> |
+  </div>
+  <div class="main">
+    <nav>
+      <a routerLink='/users/cash-value'>Cash Holding</a> ||
       <a routerLink='/users/investment-value'>Investment Value</a> 
-      <router-outlet></router-outlet> -->
-    </div>
+      <router-outlet></router-outlet>
+    </nav>
+  </div>
+  
 </body>
 </html>
