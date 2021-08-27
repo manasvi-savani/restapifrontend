@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestapiService } from 'src/service/restapi.service';
 
 @Component({
   selector: 'app-cash-value',
@@ -7,23 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CashValueComponent implements OnInit {
 
-  // declare model data for this component
-  total = 0
 
-  constructor() { }
+  constructor(private restapiService:RestapiService) { }
+
+  cash:any = {category: 'users',value:''}
+  header = ['id','account','value']
+ 
+  serviceCallAllCash(){
+    this.restapiService.getcash_t(this.cash).subscribe((data:any)=>{this.cash = data})
+  }
 
   ngOnInit(): void {
+    this.serviceCallAllCash()
   }
-
-  // we can declare methods of this class here
-  handleSortie(value:number){
-    // here we can handle the CUSTOM event from the child component
-    this.total += value
-  }
-  // handleSellEvent(value:number){
-  //   this.total -= value
-  // }
-
-
-
 }
