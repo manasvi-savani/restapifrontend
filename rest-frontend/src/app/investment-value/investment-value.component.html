@@ -1,6 +1,6 @@
 <section>
     <aside>
-      <table style="width:50%">
+      <table style="width:100%">
         <tr>
           <th>ID</th>
           <th>Stock Name</th>
@@ -16,7 +16,22 @@
           <td *ngFor = "let column of header">
             {{row[column]}}
           </td>
+          <td 
+          [ngClass]="{
+            'positive' : row.gain_loss > 0,
+            'negative' : row.gain_loss < 0}">
+            {{row.gain_loss}}
+        </td>   
+          <td 
+          [ngClass]="{
+            'positive' : row.total_gain_loss > 0,
+            'negative' : row.total_gain_loss < 0}">
+            {{row.total_gain_loss}}
+        </td>   
         </tr>
+        
+        
+       
         
       </table> 
     </aside>
