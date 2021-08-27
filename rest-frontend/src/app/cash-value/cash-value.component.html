@@ -1,19 +1,22 @@
-<section>
-  <table style="width:100%">
-    <tr>
-      <th>ID</th>
-      <th>Account</th>
-      <th>Value</th>
-    </tr>
-    <tr *ngFor = "let row of cash">
-      <td *ngFor = "let column of header">
-        {{row[column]}}
-      </td>
-    </tr>
-    
-  </table> 
-  
-
-  
-  </section>
+<div class="table-responsive">
+  <table class="table">
+      <thead>
+          <tr>
+            <th>ID</th>
+            <th>Account</th>
+            <th>Value</th>
+           
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let row of cash">
+          <td *ngFor = "let column of header">
+            {{row[column]}}
+            
+          </td>
+          
+        </tr>
+      </tbody>
+  </table>
+</div>
   

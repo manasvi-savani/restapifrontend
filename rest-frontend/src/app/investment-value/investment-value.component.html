@@ -1,38 +1,39 @@
-<section>
-    <aside>
-      <table style="width:100%">
-        <tr>
-          <th>ID</th>
-          <th>Stock Name</th>
-          <th>Quantity</th>
-          <th>Cost Per Basis</th> 
-          <th>Last Price</th>
-          <th>Total Cost</th>
-          <th>Market Value</th>
-          <th>Today's G/L</th>
-          <th>Total G/L</th>
-        </tr>
-        <tr *ngFor = "let row of stocks">
-          <td *ngFor = "let column of header">
-            {{row[column]}}
-          </td>
-          <td 
-          [ngClass]="{
-            'positive' : row.gain_loss > 0,
-            'negative' : row.gain_loss < 0}">
-            {{row.gain_loss}}
-        </td>   
-          <td 
-          [ngClass]="{
-            'positive' : row.total_gain_loss > 0,
-            'negative' : row.total_gain_loss < 0}">
-            {{row.total_gain_loss}}
-        </td>   
-        </tr>
-        
-        
-       
-        
-      </table> 
-    </aside>
-  </section>
+
+  <h3>Total Investment: {{investment | json}}</h3>
+  <div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Stock Name</th>
+            <th>Quantity</th>
+            <th>Cost Per Basis</th> 
+            <th>Last Price</th>
+            <th>Total Cost</th>
+            <th>Market Value</th>
+            <th>Today's G/L</th>
+            <th>Total G/L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let row of stocks">
+            <td *ngFor = "let column of header">
+              {{row[column]}}
+            </td>
+            <td 
+            [ngClass]="{
+              'positive' : row.gain_loss > 0,
+              'negative' : row.gain_loss < 0}">
+              {{row.gain_loss}}
+          </td>   
+            <td 
+            [ngClass]="{
+              'positive' : row.total_gain_loss > 0,
+              'negative' : row.total_gain_loss < 0}">
+              {{row.total_gain_loss}}
+          </td>   
+          </tr>
+        </tbody>
+    </table>
+  </div>
+    

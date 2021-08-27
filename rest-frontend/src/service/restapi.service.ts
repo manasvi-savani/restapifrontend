@@ -60,6 +60,8 @@ export class RestapiService {
     return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/cash`)
   }
 
-
+  getinvestment(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/investment`)
+  }
   
 }
