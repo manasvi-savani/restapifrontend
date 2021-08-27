@@ -1,9 +1,9 @@
 <section>
-  <table style="width:50%">
+  <table style="width:100%">
     <tr>
-      <th *ngFor = "let column of header">
-        {{column}}
-      </th>
+      <th>ID</th>
+      <th>Account</th>
+      <th>Value</th>
     </tr>
     <tr *ngFor = "let row of cash">
       <td *ngFor = "let column of header">

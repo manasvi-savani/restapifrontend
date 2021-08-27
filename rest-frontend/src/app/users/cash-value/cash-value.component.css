@@ -1,7 +1,16 @@
-table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse;
-}
-th, td {
-  background-color: #96D4D4;
-}
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  td {
+    background-color: whitesmoke;
+  }
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #96D4D4;
+    color: black;
+  }

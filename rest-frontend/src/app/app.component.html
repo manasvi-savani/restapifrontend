@@ -9,9 +9,14 @@
      <app-market-movers></app-market-movers>
     </div>
     <div class="main">
-      <a routerLink='/users/cash-value'>Cash Value</a> |
+      <nav>
+        <a routerLink='/users/cash-value'>Cash Value</a> |
+        <a routerLink='/users/investment-value'>Investment Value</a> 
+        <router-outlet></router-outlet>
+      </nav>
+      <!-- <a routerLink='/users/cash-value'>Cash Value</a> |
       <a routerLink='/users/investment-value'>Investment Value</a> 
-      <router-outlet></router-outlet>
+      <router-outlet></router-outlet> -->
     </div>
 </body>
 </html>

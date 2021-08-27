@@ -25,3 +25,16 @@ body { font-family: 'Times New Roman', Times, serif;
     min-height: 300px;
  }
 
+nav {
+  float: left;
+}
+
+nav a {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-left: 0px;
+  padding-top: 10px;
+  position: relative;
+}
+
