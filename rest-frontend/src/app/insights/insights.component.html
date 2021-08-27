@@ -1,1 +1,22 @@
-<p>insights works!</p>
+
+  <div class="p-2" style="display: flex;">
+ 
+    <div class="card p-2" style="width: 15rem;">
+      <div class="card-body">
+        <h4 class="card-title fw-bold">Buy Date</h4>
+        <p class="card-text">Name: {{stockInRangeBuy | json }}</p>
+
+      </div>
+      <button (click)='serviceBuyStockInRange()'>Get Buy Stocks In Range</button>
+    </div>
+
+    <div class="card p-2" style="width: 15rem;">
+      <div class="card-body">
+        <h4 class="card-title fw-bold">Sell Date</h4>
+        <p class="card-text">Name: {{stockInRangeSell | json }}</p>
+
+      </div>
+      <button (click)='serviceSellStockInRange()'>Get Sell Stocks In Range</button>
+    </div>
+    
+  </div>
