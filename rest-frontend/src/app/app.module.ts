@@ -4,16 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
-import { NetWorthComponent } from './users/net-worth/net-worth.component';
-import { CashValueComponent } from './users/cash-value/cash-value.component';
-import { InvestmentValueComponent } from './users/investment-value/investment-value.component';
-import { MarketMoversComponent } from './users/market-movers/market-movers.component';
-import { InsightsComponent } from './users/insights/insights.component';
+import { NetWorthComponent } from './net-worth/net-worth.component';
+import { CashValueComponent } from './cash-value/cash-value.component';
+import { InvestmentValueComponent } from './investment-value/investment-value.component';
+import { MarketMoversComponent } from './market-movers/market-movers.component';
+import { InsightsComponent } from './insights/insights.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RestapiService } from 'src/service/restapi.service';
-import { ChartJsComponent } from './chart-js/chart-js.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 
@@ -27,7 +28,6 @@ import { ChartJsComponent } from './chart-js/chart-js.component';
     InvestmentValueComponent,
     MarketMoversComponent,
     InsightsComponent,
-    ChartJsComponent,
    
   ],
   imports: [
@@ -35,6 +35,8 @@ import { ChartJsComponent } from './chart-js/chart-js.component';
     AppRoutingModule,
     FormsModule, // the FormsModule is needed for forms,
     HttpClientModule, BrowserAnimationsModule,
+    FontAwesomeModule
+
 
   ],
   providers: [RestapiService],

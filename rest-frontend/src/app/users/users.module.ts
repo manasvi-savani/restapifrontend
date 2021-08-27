@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { UsersComponent } from './users.component';
 import { NetWorthComponent } from './net-worth/net-worth.component';
-import { CashValueComponent } from './cash-value/cash-value.component';
+import { CashValueComponent } from '../cash-value/cash-value.component';
 import { InvestmentValueComponent } from './investment-value/investment-value.component';
 import { MarketMoversComponent } from './market-movers/market-movers.component';
 import { InsightsComponent } from './insights/insights.component';
