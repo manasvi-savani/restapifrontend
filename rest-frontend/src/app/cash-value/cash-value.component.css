@@ -1,0 +1,5 @@
+tbody>tr:hover {
+    background-color: rgb(98, 98, 119);
+    cursor: pointer;
+    color: white;
+}
