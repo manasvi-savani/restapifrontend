@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestapiService } from 'src/service/restapi.service';
 
 @Component({
   selector: 'app-investment-value',
@@ -7,33 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvestmentValueComponent implements OnInit {
 
-  // declare model data for this component
-  total = 0
-  codes = [
-    {code:'AMZN', price:42}, // member zero
-    {code:'NFLX', price:12}, // member 1
-    {code:'GOOGL', price:142},
-    {code:'FB', price:82},
-    {code:'AAPL', price:11},
-  ]
 
-  constructor() { }
+  constructor(private restapiService:RestapiService) { }
 
+  stocks:any = {category: 'users',value:''}
+  header = ['id','stock_name','quantity','sale_price','close_price','total_cost','market_value','gain_loss','total_gain_loss']
+
+  serviceCallAllStocks(){
+    this.restapiService.getstocks(this.stocks).subscribe((data:any)=>{this.stocks = data})
+  }
   ngOnInit(): void {
-  }
-
-  // we can declare methods of this class here
-  handleSortie(value:number){
-    // here we can handle the CUSTOM event from the child component
-    this.total += value
-  }
-  // handleSellEvent(value:number){
-  //   this.total -= value
-  // }
-
-
-  handleCodeChangeEvent(whichCode:any){
-    this.codes[whichCode['index']].code = whichCode['code']
+    this.serviceCallAllStocks()
   }
 
 }

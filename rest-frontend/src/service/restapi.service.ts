@@ -52,4 +52,7 @@ export class RestapiService {
   get5loser(params={category:'users'}){
     return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/loser5`)
   }
+  getstocks(params={category:'users'}){
+    return this.http.get(`http://restapi-restapi.namdevops21.conygre.com/${params.category}/stocks`)
+  }
 }
